@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost And Found</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <div class="container">
+        <h2>Lost And Found portal </h2>
+        <div class="tabs">
+            <button class="active" onclick="toggletab('login')">Login</button>
+            <button onclick="toggletab('signup')">Signup </button>
+
+        </div>
+
+        <div id="login-form">
+            <form onsubmit="loginAndRedirect(event)"> 
+            <input type="email" name="email"  placeholder="Email address" required/>
+            <input type="password" name="password" placeholder="Password" required/>
+            <div class="forget">Forget password?</div>
+           <button class="login-btn" type="submit">Login</button>
+            <div class="signup-link">Not a member? <a href="#" onclick="toggletab('signup')">Signup now</a></div>
+            </form>
+        </div>
+    
+    <div id="signup-form" style="display:none;">
+        <form onsubmit="signupAndRedirect(event)">
+        <input type="text" name="full name" placeholder="Full name" required />
+        <input type="email" name="Email Address" placeholder="Email address" required/>
+        <input type="password" name="password" placeholder="password" required/>
+        <button class ="signup-btn" type="submit">Signup</button>
+        <div class="signup-link">Already a member?<a href="#" onclick="toggletab('login')">Login here</a></div>
+        </form>
+    </div>
+    </div>
+
+
+
+    <script>
+        function toggletab(tab){
+            const loginform =document.getElementById('login-form');
+            const signupform=document.getElementById('signup-form');
+            
+            const buttons=document.querySelectorAll('.tabs button');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            if (tab === 'login'){
+                loginform.style.display ='block';
+                signupform.style.display= 'none';
+
+                buttons[0].classList.add('active');
+            }
+            else{
+                loginform.style.display='none';
+                signupform.style.display='block';
+
+                buttons[1].classList.add('active');
+            }
+        }
+
+        function loginAndRedirect(event){
+           event.preventDefault();  // यह form को reload होने से रोकता है
+
+           window.location.href="report.html";
+        }
+
+        function signupAndRedirect(event){
+           event.preventDefault();   // यह form को reload होने से रोकता है
+
+           window.location.href="report.html";  // यूज़र को रिपोर्ट वाले पेज पर रीडायरेक्ट (redirect) करें
+        }
+
+    </script>
+</body>
+</html>

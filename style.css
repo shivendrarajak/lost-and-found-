@@ -1,0 +1,91 @@
+
+
+    body {
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+            background: linear-gradient(to right, #5e5963, #31041f);
+            background-image: url(bg1.jpg);
+            background-size: cover;
+    }
+
+    .container {
+      background: #c0afaf;
+      padding: 30px;
+      border-radius: 10px;
+      width: 320px;
+      box-shadow: 0 0 15px rgba(27, 1, 1, 0.63);
+      font-style: oblique;
+      margin: 188px 53px;
+
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .tabs button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      background: #a36d6d;
+      font-weight: bold;
+    }
+
+    .tabs .active {
+      background: linear-gradient(to right, #05000a, #9e6487);
+      color: rgb(243, 238, 238);
+    }
+
+    .container input {
+      width: 94%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #3a2c2c;
+      border-radius: 5px;
+    }
+
+    .forget{
+      text-align: right;
+      font-size: 0.85em;
+      margin-bottom: 10px;
+      color: #521a65;
+      cursor: pointer;
+    }
+
+    .login-btn, .signup-btn{
+      width: 100%;
+      padding: 10px;
+      border: none;
+      color: rgba(223, 228, 217, 0.929);
+      background: linear-gradient(to right, #9e91a8, #692c51);
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    
+
+    .signup-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9em;
+    }
+
+    .signup-link a {
+      color: #250ed8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .login-btn:hover {
+      opacity: 0.9;
+    }
+ 
+     
